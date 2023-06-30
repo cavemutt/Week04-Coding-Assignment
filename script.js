@@ -10,10 +10,13 @@ ages.push(120)
 console.log("1.b. ", ages[ages.length - 1] - ages[0])
 // c. find the average age
 // I used the reduce method to get more practice with it
-console.log("1.c. ", ages.reduce((a, b) => (a + b) / ages.length))
+console.log("1.c. reduce version", ages.reduce((a, b) => (a + b)) / ages.length)
+// but here is a for loop version
+let ageSum = 0
 for(let i = 0; i < ages.length; i++) {
-    console.log(ages[i])
+    ageSum += ages[i]
 }
+console.log("1.c. for loop version ", ageSum / ages.length)
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -58,7 +61,7 @@ console.log("7. ", concat('conCat', 20))
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // 8. use a function to put a name together 
 const fullName = (firstName, lastName) => `${firstName} ${lastName}`;
-console.log("8. " + fullName("Jeremy", "Bearimey"))
+console.log("8. " + fullName("Jeremy", "Bearimy"))
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // 9. function that returns true if sum of an array > 100 
